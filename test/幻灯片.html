@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+  <style>
+    * {
+      box-sizing:border-box;
+    }
+  </style>
+
+  <link href="../www/lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="../www/css/style.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+
+  <!-- ionic/angularjs js -->
+  <script src="../www/lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- your app's js -->
+  <script src="../www/js/app.js"></script>
+</head>
+<body ng-app="starter" ng-controller="imgCtrl">
+<ion-header-bar class="bar-positive">
+  <h1 class="title">active : {{index}}</h1>
+</ion-header-bar>
+<ion-slide-box does-continue="true" show-pager="true" auto-play="true" active-slide="index" pager-click="go(index)">
+  <ion-slide>
+    <img src="../www/img/huoying5.jpg">
+  </ion-slide>
+  <ion-slide>
+    <img src="../www/img/huoying6.jpg">
+  </ion-slide>
+  <ion-slide>
+    <img src="../www/img/shui.jpg">
+  </ion-slide>
+</ion-slide-box>
+
+</body>
+</html>

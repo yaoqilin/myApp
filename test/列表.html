@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+  <style>
+    * {
+      box-sizing:border-box;
+    }
+  </style>
+
+  <link href="../www/lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="../www/css/style.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+
+  <!-- ionic/angularjs js -->
+  <script src="../www/lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- your app's js -->
+  <script src="../www/js/app.js"></script>
+</head>
+<body ng-app="starter" ng-controller="listCtrl">
+<ion-header-bar class="bar-positive">
+  <a class="button button-clear icon ion-ios-minus-outline" ng-click="flag.showDelete=!flag.showDelete;flag.showReorder=false;"></a>
+  <h1 class="title">成员按钮</h1>
+  <a class="button" ng-click="flag.showReorder=!flag.showReorder;flag.showDelete=false;">重新排序</a>
+</ion-header-bar>
+<ion-content>
+  <ion-list show-delete="flag.showDelete" show-reorder="flag.showReorder">
+    <ion-item ng-repeat="item in items">
+      {{item}}!
+      <ion-option-button class="button-calm">...</ion-option-button>
+      <ion-delete-button class="ion-minus-circled" ng-click="delete_item(item)"></ion-delete-button>
+      <ion-reorder-button class="ion-navicon" on-reorder="move_item(item,$fromIndex,$toIndex)"></ion-reorder-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+</body>
+</html>

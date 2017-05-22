@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+  <style>
+    * {
+      box-sizing:border-box;
+    }
+  </style>
+
+  <link href="../www/lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="../www/css/style.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+
+  <!-- ionic/angularjs js -->
+  <script src="../www/lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- your app's js -->
+  <script src="../www/js/app.js"></script>
+</head>
+<body ng-app="starter" ng-controller="alertCtrl">
+  <ion-content padding="true">
+    <button class="button button-block" ng-click="openModal();">打开模态对话框</button>
+  </ion-content>
+  <script id="my-modal.html" type="text/ng-template">
+    <ion-modal-view>
+      <ion-header-bar class="bar-energized">
+        <h1 class="title">ion-modal-view</h1>
+        <a class="button" ng-click="closeModal();">关闭</a>
+      </ion-header-bar>
+      <ion-content>
+        Hello!
+      </ion-content>
+    </ion-modal-view>
+  </script>
+</body>
+</html>

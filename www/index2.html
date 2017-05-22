@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>IONIC特效总结</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="lib/ionic/css/ionic.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <script type="text/javascript" src="js/app3.js"></script>
+</head>
+<body ng-app="lzy">
+<!--用指令的形式bar的布局-->
+<!--<ion-header-bar align-title="center" no-tap-scroll="true" class="bar-positive">
+  <p class="title">我的标题</p>
+</ion-header-bar>
+&lt;!&ndash;内容&ndash;&gt;
+<ion-content ng-controller="listCtrl" overflow-scroll="false">
+  <ul class="list">
+    <li class="item" ng-repeat="item in items">{{item}}</li>
+  </ul>
+</ion-content>
+&lt;!&ndash;页脚&ndash;&gt;
+<ion-footer-bar align-title="left" class="bar-dark">
+  <h1 class="title">我是页脚</h1>
+</ion-footer-bar>-->
+
+<!--拉动刷新-->
+<ion-header-bar align-title="center" class="bar-assertive">
+  <h1 class="title">拉动刷新</h1>
+</ion-header-bar>
+<ion-content ng-controller="resh">
+  <ion-refresher pulling-text="正在进行拉动刷新,请等待.." on-refresh="doRefresh()"></ion-refresher>
+  <ul class="list">
+    <li class="item" ng-repeat="item in items">{{item}}</li>
+  </ul>
+</ion-content>
+
+<!--滚动刷新-->
+<!--<ion-header-bar align-title="center" class="bar-positive">
+  <h1 class="title">{{name}}</h1>
+</ion-header-bar>
+<ion-content ng-controller="scrollCtrl" >
+  <ul class="list">
+    <li class="item" ng-repeat="item in items">{{item}}</li>
+  </ul>
+  <ion-infinite-scroll on-infinite="more()"></ion-infinite-scroll>
+</ion-content>-->
+
+<!--tabs的布局-->
+<!--<ion-header-bar align-title="center" class="bar-balanced">
+  <h1 class="title">我是导航</h1>
+</ion-header-bar>
+<ion-tabs class="tabs-striped tabs-top tabs-icon-top" ng-controller="tabCtrl">
+  <ion-tab title="国内新闻" icon-off="ion-home" icon-on="ion-home assertive">
+    <ion-view>
+      <ion-content>
+        1
+      </ion-content>
+    </ion-view>
+  </ion-tab>
+  <ion-tab title="国际新闻" icon-off="ion-help-buoy" icon-on="ion-help-buoy assertive" on-select="dosometing()">
+    <ion-view>
+      <ion-content>
+        2
+      </ion-content>
+    </ion-view>
+  </ion-tab>
+  <ion-tab title="本地新闻" icon-off="ion-gear-a" icon-on="ion-gear-a assertive">
+    <ion-view>
+      <ion-content>
+        3
+      </ion-content>
+    </ion-view>
+  </ion-tab>
+</ion-tabs>-->
+
+<!--列表-->
+<!--<ion-header-bar align-title="center" class="bar-positive">
+  <h1 class="title">列表删除和排序</h1>
+</ion-header-bar>
+<ion-content ng-controller="allCtrl">
+  <ion-list show-delete="true" show-reorder="true">
+    <ion-item ng-repeat="item in items">
+      {{item}}
+      <ion-delete-button class="ion-minus-circled" ng-click="delete_item(item)">
+      </ion-delete-button>
+      <ion-reorder-button class="ion-navicon"
+                          on-reorder="move_item(item,$fromIndex,$toIndex)">
+      </ion-reorder-button>
+    </ion-item>
+  </ion-list>
+</icon-content>-->
+
+<!--侧边栏-->
+<!--<ion-side-menus>
+  &lt;!&ndash;中心内容&ndash;&gt;
+  <ion-side-menu-content>
+    <ion-header-bar align-title="center" class="bar-dark">
+      <button class="button" menu-toggle="left">切换</button>
+      <h1 class="title">侧边栏的实例</h1>
+    </ion-header-bar>
+    <ion-content class="calm-bg light">我是内容区域</ion-content>
+  </ion-side-menu-content>
+  &lt;!&ndash;左侧滑动出来的内容&ndash;&gt;
+  <ion-side-menu class="balanced-bg" side="left">我是左侧滑动的内容</ion-side-menu>
+</ion-side-menus>-->
+
+<!--幻灯片-->
+<!--<ion-slide-box auto-play="true" does-continue="true">
+  <ion-slide>
+    <img src="img/hero1.jpg">
+  </ion-slide>
+  <ion-slide>
+    <img src="img/hero2.jpg">
+  </ion-slide>
+  <ion-slide>
+    <img src="img/hero3.jpg">
+  </ion-slide>
+</ion-slide-box>-->
+
+<!--复选框-->
+<!--<ion-content ng-controller="check">
+  <ion-list>
+    <ion-checkbox ng-repeat="item in items" ng-model="item.selected">
+      {{item.label}} : {{item.selected}}
+    </ion-checkbox>
+  </ion-list>
+  &lt;!&ndash;原生的复选框&ndash;&gt;
+  &lt;!&ndash;<label>您的名字:</label>
+  <input type="checkbox" value="name">&ndash;&gt;
+</ion-content>-->
+
+<!--单选框-->
+<!--<ion-content ng-controller="radio">
+  <div class="list">
+    <div class="item item-divider">您的选择是:{{ret.choice}}</div>
+    <ion-radio ng-repeat="item in items" ng-model="ret.choice" ng-value="item">
+      {{item}}
+    </ion-radio>
+  </div>
+</ion-content>-->
+
+<!--模态框-->
+<!--<ion-content padding="true" ng-controller="modal">
+  <button class="button button-block" ng-click="openModal()">打开模态框</button>
+</ion-content>
+&lt;!&ndash;模板,模板的名称是由ID来指明的&ndash;&gt;
+<script id="my-modal.html" type="text/ng-template">
+  <ion-modal-view>
+      <ion-header-bar class="bar-energized">
+        <h1 class="title">模态框实例</h1>
+        <a class="button" ng-click="closeModal()">关闭模态框</a>
+      </ion-header-bar>
+      <ion-content>
+        hello ！！！！李志远!!!!
+      </ion-content>
+  </ion-modal-view>
+</script>-->
+
+<!--上拉菜单 -->
+<!--<div ng-controller="slideup">
+  <ion-header-bar class="bar-energized">
+    <h1 class="title">上拉菜单</h1>
+    <a class="button" ng-click="show()">上拉</a>
+  </ion-header-bar>
+  <ion-content>
+    今天，郑州天气晴朗，万里无云，适合郊游，同学们欢天喜地，锣鼓喧天，鞭炮齐鸣
+  </ion-content>
+</div>-->
+
+<!--弹出框-->
+<!--<ion-header-bar class="bar-positive">
+  <h1 class="title">$ionicPopup</h1>
+</ion-header-bar>
+<ion-content padding="true" ng-controller="layerCtrl">
+  <a class="button button-block button-calm" ng-click="showPopup();">定制弹出框/popup</a>
+  <a class="button button-block button-calm" ng-click="showConfirm();">确认框/confirm</a>
+  <a class="button button-block button-calm" ng-click="showAlert();">警告框alert</a>
+  <a class="button button-block button-calm" ng-click="showPrompt();">提示框/prompt</a>
+</ion-content>
+<ion-footer-bar class="bar-positive">
+  <h1 class="title">{{status}}</h1>
+</ion-footer-bar>-->
+</body>
+</html>
+

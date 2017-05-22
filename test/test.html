@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+  <style>
+    * {
+      box-sizing:border-box;
+    }
+  </style>
+
+  <link href="../www/lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="../www/css/style.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+
+  <!-- ionic/angularjs js -->
+  <script src="../www/lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- your app's js -->
+  <script src="../www/js/app2.js"></script>
+</head>
+<body ng-app="lzy" >
+<!--滚动-->
+<!--<ion-header-bar>
+  <h1 class="title">滚动刷新的效果</h1>
+</ion-header-bar>
+<ion-content ng-controller="resh">
+  <ion-refresher pulling-text="正在进行拉动刷新" on-refresh="doRefresh()"></ion-refresher>
+  <ul class="list">
+    <li class="item" ng-repeat="item in items">{{item}}</li>
+  </ul>
+</ion-content>-->
+
+
+<!--Tab切换-->
+<!--<ion-tabs class="tabs-top" ng-controller="tab">
+  <ion-tab title="table1" on-select="dosometing()">
+    <ion-view>
+      <ion-content class="calm-bg">
+        tab 1 content
+      </ion-content>
+    </ion-view>
+  </ion-tab>
+  <ion-tab title="tab2">
+    <icon-view>
+      <ion-content class="calm-bg">
+        tab 2 content
+      </ion-content>
+    </icon-view>
+  </ion-tab>
+  <ion-tab title="tab3">
+    <icon-view>
+      <ion-content class="calm-bg">
+        tab 3 content
+      </ion-content>
+    </icon-view>
+  </ion-tab>
+</ion-tabs>-->
+
+<!--列表-->
+<!--<ion-content ng-controller="list">
+  <ion-list show-reorder="true">
+    <ion-item ng-repeat="item in items">
+      {{item}}!
+      <ion-delete-button class="ion-minus-circled" ng-click="delete_item(item)"></ion-delete-button>
+      <ion-reorder-button class="ion-navicon" on-reorder="move_item(item,$fromIndex,$toIndex)"></ion-reorder-button>
+    </ion-item>
+  </ion-list>
+</ion-content>-->
+
+<!--侧边栏-->
+<!--<ion-side-menus>
+  <ion-side-menu-content>
+    <ion-header-bar class="bar-positive">
+      <a menu-toggle="left" class="button icon ion-navicon"></a>
+      <h1 class="title">ion-side-menu-content</h1>
+    </ion-header-bar>
+    <ion-content>
+      <p>this is main area of side-menus</p>
+    </ion-content>
+  </ion-side-menu-content>
+  <ion-side-menu side="left">
+    <ion-content class="balanced-bg">
+  </ion-side-menu>
+  <ion-side-menu side="right">右边的内容</ion-side-menu>
+</ion-side-menus>-->
+
+
+<!--幻灯片-->
+<!--<ion-slide-box does-continue="true" show-pager="true" auto-play="true" active-slide="index" pager-click="go(index)">
+  <ion-slide>
+    <img src="img/huoying5.jpg">
+  </ion-slide>
+  <ion-slide>
+    <img src="img/huoying6.jpg">
+  </ion-slide>
+</ion-slide-box>-->
+
+<!--复选框-->
+<!--<ion-content ng-controller="check">
+  <ion-list>
+    <ion-checkbox ng-repeat="item in items" ng-model="item.selected">
+      {{item.label}} : {{item.selected}}
+    </ion-checkbox>
+  </ion-list>
+</ion-content>-->
+
+<!--单选框-->
+<!--<ion-content ng-controller="radio">
+  <div class="list">
+    <div class="item item-divider">Your choice : {{ret.choice}}</div>
+    <ion-radio ng-repeat="item in items"
+               ng-model="ret.choice" ng-value="item">
+      {{item}}
+    </ion-radio>
+  </div>
+</ion-content>-->
+
+<!--模态框-->
+<!--<ion-content padding="true" ng-controller="alert">
+  <button class="button button-block" ng-click="openModal();">打开模态对话框</button>
+</ion-content>
+<script id="my-modal.html" type="text/ng-template">		<ion-modal-view>
+  <ion-header-bar class="bar-energized">
+    <h1 class="title">ion-modal-view</h1>
+    <a class="button" ng-click="closeModal();">关闭</a>
+  </ion-header-bar>
+  <ion-content>
+    Hello!
+  </ion-content>
+</ion-modal-view>
+</script>-->
+
+<!--上拉-->
+<!--<ion-header-bar class="bar-positive" ng-controller="sideup">
+  <h1 class="title">$ionicActionSheet</h1>
+  <a class="button" ng-click="show();">操作</a>
+</ion-header-bar>
+<ion-content padding="true">
+  <p>那师父正按辔徐观，又见悟空兄弟方到。悟净道：“师父不曾跌下马来么？”长老骂道：“悟空这泼猴，他把马儿惊了，早是我还骑得住哩！”行者陪笑道：“师父莫骂我，都是猪八戒说马行迟，故此着他快些。”那呆子因赶马，走急了些儿，喘气嘘嘘，口里唧唧哝哝的闹道：“罢了，罢了！见自肚别腰松，担子沉重，挑不上来，又弄我奔奔波波的赶马！”长老道：“徒弟啊，你且看那壁厢，有一座庄院，我们却好借宿去也。”行者闻言，急抬头举目而看，果见那半空中庆云笼罩，瑞霭遮盈，情知定是佛仙点化，他却不敢泄漏天机，只道：“好，好，好！我们借宿去来。”</p>
+  <p>长老连忙下马，见一座门楼，乃是垂莲象鼻，画栋雕梁。沙僧歇了担子，八戒牵了马匹道：“这个人家，是过当的富实之家。”行者就要进去，三藏道：“不可，你我出家人，各自避些嫌疑，切莫擅入。且自等他有人出来，以礼求宿，方可。”八戒拴了马，斜倚墙根之下。三藏坐在石鼓上。行者、沙僧坐在台基边。久无人出，行者性急，跳起身入门里看处，原来有向南的三间大厅，帘栊高控。屏门上，挂一轴寿山福海的横披画。两边金漆柱上，贴着一幅大红纸的春联，上写着：“丝飘弱柳平桥晚，雪点香梅小院春。”正中间，设一张退光黑漆的香几，几上放一个古铜兽炉。上有六张交椅，两山头挂着四季吊屏。
+  </p>
+</ion-content>-->
+<div ng-controller="layerCtrl">
+  <ion-header-bar class="bar-positive" >
+    <h1 class="title">$ionicPopup</h1>
+  </ion-header-bar>
+  <ion-content padding="true" >
+    <a class="button button-block button-calm" ng-click="showPopup();">定制弹出框/popup</a>
+    <a class="button button-block button-calm" ng-click="showConfirm();">确认框/confirm</a>
+    <a class="button button-block button-calm" ng-click="showAlert();">警告框alert</a>
+    <a class="button button-block button-calm" ng-click="showPrompt();">提示框/prompt</a>
+  </ion-content>
+  <ion-footer-bar class="bar-positive">
+    <h1 class="title">{{status}}</h1>
+  </ion-footer-bar>
+</div>
+
+
+</body>
+</html>

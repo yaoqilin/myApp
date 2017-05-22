@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+  <style>
+    * {
+      box-sizing:border-box;
+    }
+  </style>
+
+  <link href="../www/lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="../www/css/style.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+
+  <!-- ionic/angularjs js -->
+  <script src="../www/lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- your app's js -->
+  <script src="../www/js/app.js"></script>
+</head>
+<body ng-app="starter" ng-controller="ezCtrl">
+<!--应用不同的指令，可以让页面的布局显得更加的具有动态的效果-->
+
+<!--标题可以使用ion-header-bar 指令-->
+<ion-header-bar align-title="center" class="bar-positive">
+  <h1 class="title">ion-header-bar</h1>
+</ion-header-bar>
+<ion-content overflow-scroll="false" ng-controller="refresh">
+  <!--内容较多的时候，可以设置overflow-scroll属性-->
+  <!--<ul class="list">
+    <li  class="item" ng-repeat="item in items">{{item}}</li>
+  </ul>-->
+  <!--拉动刷新-->
+  <ion-refresher pulling-text="pull to refresh..." on-refresh="doRefresh()">
+  </ion-refresher>
+  <ul class="list">
+    <li class="item" ng-repeat="item in items">{{item}}</li>
+  </ul>
+
+</ion-content>
+<!--页脚可以使用ion-footer-bar 指令-->
+<ion-footer-bar class="bar-positive">
+  <a class="button" ng-click="gotop();">GO TOP!</a>
+  <a class="button" ng-click="gobottom();">GO BOTTOM!</a>
+</ion-footer-bar>
+
+</body>
+</html>

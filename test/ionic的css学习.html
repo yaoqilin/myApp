@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html ng-app="lzy">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>IONIC的CSS学习</title>
+    <!--1.设置一下viewprot属性-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!--2.引入ionic的CSS文件-->
+    <link rel="stylesheet" href="../www/lib/ionic/css/ionic.min.css">
+    <!--3.引入我们自己的CSS文件-->
+    <link rel="stylesheet" href="../www/css/style.css">
+    <!--4.引入ionic的JS文件-->
+    <script src="../www/lib/ionic/js/ionic.bundle.js"></script>
+    <!--5.引入ionic的启动文件-->
+    <script src="../www/js/app3.js"></script>
+    <style>
+      * {
+        box-sizing:border-box;
+      }
+    </style>
+</head>
+<body>
+  <!--灰色-->
+  <!--<div class="bar bar-stable">灰色</div>-->
+  <!--蓝色-->
+  <!--<div class="bar bar-positive">蓝色</div>-->
+  <!--海天蓝-->
+  <!--<div class="bar bar-calm">海天蓝</div>-->
+  <!--绿色-->
+  <!--<div class="bar bar-balanced">绿色</div>-->
+  <!--黄色-->
+  <!--<div class="bar bar-energized">黄色</div>-->
+  <!--红色-->
+  <!--<div class="bar bar-assertive">红色</div>-->
+  <!--紫色-->
+  <!--<div class="bar bar-royal">紫色</div>-->
+  <!--黑色-->
+  <!--<div class="bar bar-dark">黑色</div>-->
+
+
+  <!--基本的页面布局,导航，内容，底部-->
+  <!--顶部-->
+  <div class="bar bar-header bar-dark item-input-inset">
+    <!--添加文字-->
+    <!--<h1 class="title">我是导航</h1>-->
+    <!--在导航栏里面添加搜索框-->
+    <a class="button button-clear icon-left ion-android-arrow-dropdown">北京</a>
+    <label class="search item-input-wrapper">
+      <input type="text" id="search"  placeholder="请输入您需要查询的内容">
+    </label>
+  </div>
+  <div class="bar bar-subheader bar-positive">
+    <!--按钮组-->
+    <div class="button-bar">
+      <button class="button">新闻</button>
+      <button class="button">娱乐</button>
+      <button class="button">体育</button>
+      <button class="button">军事</button>
+      <button class="button">科技</button>
+    </div>
+  </div>
+  <!--内容-->
+  <div style="overflow-y:auto" class="scroll-content has-header has-subheader has-footer">
+      <!--<p class="balanced assertive-bg dark-border">我是一段内容</p>-->
+      <i style="font-size:100px;" class="icon ion-ios-heart-outline assertive"></i>
+      <i style="font-size:100px;" class="icon ion-star assertive"></i>
+      <!--列表-->
+      <ul class="list card">
+        <li class="item item-borderless item-assertive">列表1</li>
+        <li class="item item-balanced">列表2</li>
+        <li class="item item-calm">列表3</li>
+        <li class="item item-positive">列表4</li>
+        <li class="item item-dark">列表5</li>
+        <!--分组-->
+        <li class="item item-divider"></li>
+        <li class="item item-stable">列表6</li>
+        <li class="item item-energized">列表7</li>
+        <li class="item item-royal">列表8</li>
+        <li class="item item-light">列表9</li>
+      </ul>
+      <!--文字列表, 应用场景：发布的最新时事新闻,公告,警告-->
+      <ul class="list">
+        <li class="item">
+          <h1>今天郑州天气情况，万里无云，市民们欢天喜地</h1>
+          <p>今天郑州，终于告别了连日来的高温天气，本周天气会持续凉爽，吃瓜群众表示很高兴</p>
+        </li>
+        <li class="item">
+          <h1>中秋节的来临带来了月饼的热销</h1>
+          <p>月饼有五仁月饼，芥末月饼，韭菜鸡蛋月饼，大肉月饼，等等。。。。</p>
+        </li>
+        <li class="item">
+          <h1>恭喜EDG拿到LPL夏季赛全国总冠军</h1>
+          <p>今天的比赛站罢，中国区的战队EDG和RNG携手挺进世界总决赛，预计EDG八强，RNG亚军</p>
+        </li>
+      </ul>
+      <!--列表中添加图标-->
+      <ul class="list">
+        <li class="item item-icon-left item-icon-right">
+          <i class="icon ion-calendar"></i>
+          <input type="text" placeholder="入住时间">
+          <p style="float:right;margin-top:-25px;">不限价格</p>
+          <i class="icon ion-chevron-right"></i>
+        </li>
+      </ul>
+      <!--列表中添加头像-->
+      <ul class="list">
+        <li class="item item-avatar-left">
+            <img src="../www/img/gao.jpg">
+            <i class="badge assertive-bg light">1</i>
+          <h2 class="title">高圆圆</h2>
+          <p>你好，在吗？</p>
+        </li>
+        <li class="item item-avatar-left">
+          <img src="../www/img/gao.jpg">
+          <h2 class="title">高圆圆</h2>
+
+          <p>你好，在吗？</p>
+        </li>
+        <li class="item item-avatar-left">
+          <img src="../www/img/gao.jpg">
+          <h2 class="title">高圆圆</h2>
+          <p>你好，在吗？</p>
+        </li>
+      </ul>
+      <!--在列表中使用缩略图,应用场景:图文列表-->
+      <ul class="list">
+        <li class="item item-thumbnail-left">
+          <img src="../www/img/01.jpg">
+          <h1>郑州买房子如春运，专家:房价疯涨不会持续太久</h1>
+          <p>郑州买房  郑州房价 | 8小时前</p>
+        </li>
+        <li class="item item-thumbnail-left">
+          <img src="../www/img/02.jpg">
+          <h1>男子刀捅城管致1死1伤,此前经常发生冲突</h1>
+          <p>男子刀捅城管 安阳男子刀捅城管 | 8小时前</p>
+        </li>
+        <li class="item item-thumbnail-left">
+          <img src="../www/img/03.jpg">
+          <h1>女孩大学入学通知书失踪</h1>
+          <p>女孩通知书丢失  | 8小时前</p>
+        </li>
+        <!--添加大图-->
+        <li class="item item-image">
+          <img src="../www/img/zhao.jpg">
+        </li>
+      </ul>
+
+      <!--按钮-->
+      <a class="button button-light">按钮1</a>
+      <a class="button button-large button-assertive">按钮2</a>
+      <a class="button button-small button-balanced">按钮3</a>
+      <a class="button button-full button-royal">按钮4</a>
+      <!--正常的写法-->
+      <a class="button icon-left">
+        <i class="icon ion-android-cloud"></i>
+        提交
+      </a>
+      <!--简单的写法，直接在按钮中定义图标-->
+      <a class="button icon-left ion-home calm-bg">提交</a>
+      <!--在列表中使用按钮-->
+      <ul class="list">
+        <li class="item item-button-right">
+          <p>是否要删除?</p>
+          <button class="button button-assertive light">删除</button>
+        </li>
+      </ul>
+      <!--表单的写法-->
+      <!--文本框-->
+      <div class="item-input">
+          <label class="input-label">用户名:</label>
+          <input type="text" placeholder="请输入用户名">
+      </div>
+      <!--内嵌式的文本框-->
+      <div class="item-input item-input-inset">
+        <label class="input-label">用户名:</label>
+        <input type="text" placeholder="请输入用户名">
+      </div>
+      <!--堆叠式的文本框-->
+      <div class="item-input item-stacked-label">
+        <label class="input-label">用户名:</label>
+        <input type="text" placeholder="请输入用户名">
+      </div>
+      <!--浮动式的文本框-->
+      <div class="item-input item-floating-label">
+        <label class="input-label">用户名:</label>
+        <input type="text" placeholder="请输入用户名">
+      </div>
+      <!--滑轨切换-->
+      <label class="toggle">
+        <input type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+      <label class="toggle toggle-assertive">
+        <input type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+      <!--复选框-->
+    <ul class="list">
+      <li class="item item-checkbox item-button-right">
+        <label class="checkbox">
+          <input type="checkbox">
+        </label>
+        <h2>Shopping</h2>
+        <p>Due tommorow</p>
+        <a class="button button-clear icon ion-ios-arrow-right"></a>
+      </li>
+      <li class="item item-checkbox  item-button-right">
+        <label class="checkbox">
+          <input type="checkbox" checked>
+        </label>
+        <h2>Moving house checklist</h2>
+        <a class="button button-clear icon ion-ios-arrow-right"></a>
+      </li>
+      <li class="item item-checkbox  item-button-right">
+        <label class="checkbox">
+          <input type="checkbox">
+        </label>
+        <h2>Holiday destinations</h2>
+        <a class="button button-clear icon ion-ios-arrow-right"></a>
+      </li>
+      <li class="item item-checkbox  item-button-right">
+        <label class="checkbox">
+          <input type="checkbox">
+        </label>
+        <h2>App ideas</h2>
+        <a class="button button-clear icon ion-ios-arrow-right"></a>
+      </li>
+    </ul>
+    <!--单选框-->
+    <div class="list">
+      <label class="item item-radio">
+        <input type="radio" name="group">
+        <div class="item-content">Go</div>
+        <i class="radio-icon ion-checkmark"></i>
+      </label>
+    </div>
+    <!--滑动条-->
+    <div class="range range-calm">
+      <i class="icon ion-minus-round"></i>
+      <input class="range-assertive" type="range" name="music">
+      <i class="icon ion-plus-round"></i>
+    </div>
+    <!--栅格系统-->
+    <div class="row">
+      <div class="col"><img src="../www/img/huoying1.jpg"></div>
+      <div class="col"><img src="../www/img/huoying2.jpg"></div>
+      <div class="col"><img src="../www/img/huoying3.jpg"></div>
+      <div class="col"><img src="../www/img/huoying4.jpg"></div>
+    </div>
+
+
+
+  </div>
+  <!--底部-->
+  <!--<div class="bar bar-subfooter bar-stable">
+    <h3 class="title">我是副底部</h3>
+  </div>-->
+  <!--<div class="bar bar-footer bar-dark">
+    <h1 class="title">我是底部</h1>
+  </div>-->
+  <!--tabs导航-->
+  <div class="tabs tabs-dark tabs-icon-top">
+    <a class="tab-item active">
+      <i style="font-size:30px;" class="icon ion-ios-chatbubble balanced"></i>
+      <span class="balanced">微信</span>
+    </a>
+    <a class="tab-item">
+      <i style="font-size:30px;" class="icon ion-ios-people"></i>
+      <span>通讯录</span>
+    </a>
+    <a class="tab-item has-badge">
+      <i class="badge badge-assertive">1</i>
+      <i style="font-size:27px;" class="icon ion-android-compass"></i>
+      <span>发现</span>
+    </a>
+    <a class="tab-item">
+      <i style="font-size:30px;" class="icon ion-ios-person-outline"></i>
+      <span>我</span>
+    </a>
+  </div>
+
+
+</body>
+</html>

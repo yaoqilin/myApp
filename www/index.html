@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <style>
+      * {
+        box-sizing:border-box;
+      }
+    </style>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+    <!--网站的头部-->
+    <div class="bar bar-header bar-royal item-input-inset">
+      <a class="button button-clear icon-left ion-android-arrow-dropdown">北京</a>
+      <label class="item-input-wrapper">
+        <input type="text" placeholder="输入商户名搜索">
+      </label>
+    </div>
+    <!--网站的副导航-->
+    <div class="bar bar-subheader bar-assertive">
+      <div class="button-bar">
+        <a class="button">新闻</a>
+        <a class="button">国际</a>
+        <a class="button">国内</a>
+        <a class="button">时事</a>
+        <a class="button">娱乐</a>
+      </div>
+    </div>
+    <div style="overflow-y:auto;" class="scroll-content has-header has-subheader has-footer">
+      <!--<p class="light energized-bg positive-border"><i class="icon ion-android-people positive" style="font-size:25px;"></i>我是内容1</p>
+      <p class="positive light-bg">我是内容2</p>
+      <p class="assertive positive-bg">我是内容3</p>
+      <p class="stable padding-wu energized-bg">我是内容4</p>-->
+      <!--列表-->
+      <ul class="list card list-borderless">
+        <li class="item item-divider">我的课程:</li>
+        <li class="item item-positive">Javascript</li>
+        <li class="item item-energized">CSS3</li>
+        <li class="item item-balanced">PHP</li>
+        <li class="item item-assertive">HTML5</li>
+        <li class="item item-divider">我的成绩:</li>
+        <li class="item">HTML5:90分</li>
+        <li class="item">CSS3:100分</li>
+      </ul>
+      <!--列表里面包含文字-->
+      <ul class="list">
+        <li class="item">
+          <h1>颁布新政策</h1>
+          <p>国务院今天颁布了新的政策，中央广播电视台为您全程直播</p>
+        </li>
+        <li class="item">
+          <h1>今天你幸福吗</h1>
+          <p>在今天的幸福指数的调查过程中，全中国有80%的人认为自己很幸福</p>
+        </li>
+        <li class="item">
+          <h1>全国多处受灾</h1>
+          <p>今天，全中国有多处地区遭受到了强暴雷雨天气，全国多处地区受灾，其中南方地区受灾严重</p>
+        </li>
+      </ul>
+      <!--在列表中插入图标-->
+      <ul class="list">
+        <li class="item item-icon-left item-icon-right">
+          <i class="icon ion-android-home positive"></i>
+          <!--必须使用h标签-->
+          <h2 class="positive">入住酒店时间:2016年7月4号</h2>
+          <i class="icon ion-ios-arrow-forward energized"></i>
+        </li>
+        <li class="item item-icon-left item-icon-right">
+          <i class="icon ion-social-yen positive"></i>
+          <h2 class="assertive">入住价格:1000元</h2>
+          <i class="icon ion-ios-arrow-forward energized"></i>
+        </li>
+      </ul>
+
+      <!--在列表中使用头像-->
+      <ul class="list">
+        <li class="item item-avatar-left">
+          <img src="img/gao.jpg">
+          <h2 class="title">高圆圆</h2>
+          <p>你好,在吗?</p>
+        </li>
+        <li class="item item-avatar-left">
+          <img src="img/gao.jpg">
+          <h2 class="title">高圆圆</h2>
+          <p>你好,在吗?</p>
+        </li>
+        <li class="item item-avatar-left">
+          <img src="img/gao.jpg">
+          <h2 class="title">高圆圆</h2>
+          <p>你好,在吗?</p>
+        </li>
+        <li class="item item-avatar-left">
+          <img src="img/gao.jpg">
+          <h2 class="title">高圆圆</h2>
+          <p>你好,在吗?</p>
+        </li>
+        <li class="item item-avatar-right padding-left">
+          <img src="img/gao.jpg">
+          <h2 class="title padding-left">高圆圆</h2>
+          <p class="padding-left">你好,在吗?</p>
+        </li>
+      </ul>
+      <!--在列表中使用缩略图-->
+      <ul class="list">
+        <li class="item item-thumbnail-left">
+          <img src="img/shui.jpg">
+          <h2>南方多地出现强对流天气</h2>
+          <p style="line-height: 50px;">图1显示多地乡镇受灾情况比较严重</p>
+        </li>
+      </ul>
+      <!--混合样式的列表-->
+      <ul class="list list-borderless">
+        <!--头像-->
+        <li class="item item-avatar-left item-icon-right">
+          <img src="img/gao.jpg">
+          <h2 style="font-size:25px;">gaoyuanyuan</h2>
+          <i style="font-size:25px;" class="icon ion-location">7M</i>
+        </li>
+        <!--大图-->
+        <li class="item item-image">
+          <img src="img/zhao.jpg">
+        </li>
+        <!--图标的-->
+        <li class="item item-icon-left">
+          <i class="icon ion-android-favorite-outline"></i>
+          <h2>点赞</h2>
+        </li>
+      </ul>
+
+      <!--按钮-->
+      <button class="button button-assertive button-small">点击我</button>
+      <!--加图标的按钮-->
+      <button class="button icon-right ion-android-people button-energized button-large">点击</button>
+      <!--变成块级元素的按钮-->
+      <button class="button button-block button-balanced">点击</button>
+      <!--无边框的按钮-->
+      <button class="button button-clear button-energized">点击</button>
+      <!--背景透明的按钮-->
+      <button class="button button-outline button-balanced">点击我</button>
+      <!--禁止的按钮-->
+      <button class="button button-outline button-balanced" disabled>点击</button>
+
+      <!--表单，简单单样式的表单-->
+      <div class="item-input stable-bg">
+        <label class="input-label">用户名:</label>
+        <input type="text" placeholder="请输入用户名">
+      </div>
+
+      <!--在列表中的表单-->
+      <ul class="list">
+        <li class="item item-input item-floating-label">
+          <label class="input-label">用户名:</label>
+          <input type="text" placeholder="输入用户名">
+        </li>
+        <li class="item item-input item-floating-label">
+          <label class="input-label">密码:</label>
+          <input type="password" placeholder="输入密码">
+        </li>
+        <button class="button button-block  button-balanced">提交</button>
+      </ul>
+
+      <!--常用的表单写法-->
+      <ul class="list">
+        <li class="item item-input">
+          <i class="icon ion-android-person padding-right" style="font-size:25px;"></i>
+          <input type="text" placeholder="用户名">
+        </li>
+        <li class="item item-input">
+          <i class="icon ion-locked padding-right" style="font-size:25px;"></i>
+          <input type="text" placeholder="密码">
+        </li>
+      </ul>
+
+      <!--开关-->
+      <label class="toggle">
+        <input type="checkbox">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+
+      <!--在列表中的开关-->
+      <ul class="list">
+        <li class="item item-toggle">
+          iMessage
+          <label class="toggle toggle-energized">
+            <input type="checkbox">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+        <li class="item item-toggle">
+          AppStore
+          <label class="toggle toggle-assertive">
+            <input type="checkbox">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+        <li class="item item-toggle">
+          Application
+          <label class="toggle toggle-positive">
+            <input type="checkbox">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+      </ul>
+
+      <!--多选框-->
+      <ul class="list">
+        <li class="item item-checkbox">
+          <label class="checkbox checkbox-assertive">
+            <input type="checkbox">
+          </label>
+          <h2>眼镜</h2>
+        </li>
+        <li class="item item-checkbox">
+          <label class="checkbox checkbox-balanced">
+            <input type="checkbox">
+          </label>
+          <h2>玩具熊</h2>
+        </li>
+        <li class="item item-checkbox">
+          <label class="checkbox checkbox-calm">
+            <input type="checkbox">
+          </label>
+          <h2>变形金刚</h2>
+        </li>
+      </ul>
+
+      <!--单选框-->
+      <ul class="list">
+        <li class="item item-radio">
+            <input type="radio" name="group-ad">
+            <div class="item-content">
+              男
+            </div>
+            <div class="radio-icon ion-checkmark"></div>
+        </li>
+        <li class="item item-radio">
+          <input type="radio" name="group-ad">
+          <div class="item-content">
+            女
+          </div>
+          <div class="radio-icon ion-checkmark"></div>
+        </li>
+      </ul>
+
+      <!--滑动条-->
+      <div class="range">
+        <i class="icon ion-minus-round"></i>
+        <input type="range" name="range-name">
+        <i class="icon ion-plus-round"></i>
+      </div>
+
+      <!--选择-->
+      <div class="list">
+        <div class="item item-input item-select">
+          <div class="input-label">请选择您的机型:</div>
+          <select>
+            <option>苹果</option>
+            <option>华为</option>
+            <option>中兴</option>
+            <option>三星</option>
+          </select>
+        </div>
+      </div>
+      <!--flex布局-->
+      <div class="row">
+        <div class="col-25 stable-bg"><img src="img/huoying1.jpg"></div>
+        <div class="col-25 stable-bg"><img src="img/huoying2.jpg"></div>
+        <div class="col-25 stable-bg"><img src="img/huoying3.jpg"></div>
+        <div class="col-25 stable-bg"><img src="img/huoying4.jpg"></div>
+      </div>
+    </div>
+    <!--网站的尾部-->
+      <div class="tabs tabs-dark tabs-icon-top">
+        <a class="tab-item active"><i class="icon ion-android-people"></i>新闻</a>
+        <a class="tab-item"><i class="icon ion-ios-world"></i>国际</a>
+        <a class="tab-item"><i class="icon ion-android-apps"></i>国内</a>
+        <a class="tab-item badge"><i class="icon ion-android-bulb"></i>时事<i class="badge badge-assertive">2</i></a>
+        <a class="tab-item"><i class="icon ion-android-microphone"></i>娱乐</a>
+      </div>
+  </body>
+</html>
